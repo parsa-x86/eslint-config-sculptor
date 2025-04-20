@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-sculptor",
-  "version": "0.0.0",
+  "version": "0.1.0-0",
   "description": "A flexible ESLint config with optional rule sets. Enable only what you need!",
   "keywords": [
     "eslint",
