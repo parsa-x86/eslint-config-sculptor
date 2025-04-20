@@ -9,6 +9,13 @@
   "author": "parsa-x86",
   "license": "MIT",
   "packageManager": "pnpm@10.8.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parsa-x86/eslint-config-sculptor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/parsa-x86/eslint-config-sculptor/issues"
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {
