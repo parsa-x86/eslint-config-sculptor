@@ -1,13 +1,14 @@
 import type { Linter } from "eslint";
-import { getBaseConfig } from "./configs";
+import { getBaseConfig, getTypescriptConfig } from "./configs";
 import type { SculptorOptions } from "./types";
 import { IGNORE_GLOBS } from "./globs";
 
-export const initSculptorConfig = ({ ignorePaths }: SculptorOptions) => {
+export const initSculptorConfig = (options: SculptorOptions) => {
   const config = [
-    ...getBaseConfig(),
+    ...getBaseConfig(options),
+    ...(options.enableTs ? getTypescriptConfig(options) : []),
     {
-      ignores: [...(ignorePaths ?? []), ...IGNORE_GLOBS],
+      ignores: [...(options.ignorePaths ?? []), ...IGNORE_GLOBS],
     },
   ] satisfies Linter.Config[];
 

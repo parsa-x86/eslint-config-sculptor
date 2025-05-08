@@ -1,7 +1,8 @@
 import type { Linter } from "eslint";
 import globals from "globals";
+import type { SculptorOptions } from "../../types";
 
-export const getBaseConfig = () =>
+export const getBaseConfig = ({ enableJsx }: SculptorOptions) =>
   [
     {
       languageOptions: {
@@ -13,7 +14,7 @@ export const getBaseConfig = () =>
         },
         parserOptions: {
           ecmaFeatures: {
-            jsx: true,
+            jsx: enableJsx,
           },
         },
         sourceType: "module",
